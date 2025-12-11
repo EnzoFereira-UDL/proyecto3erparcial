@@ -1,14 +1,10 @@
-// ===================================
 // Email Validation
-// ===================================
 function validateEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
 }
 
-// ===================================
 // Form Validation & Submission
-// ===================================
 function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
@@ -119,9 +115,7 @@ function initContactForm() {
     });
 }
 
-// ===================================
 // Active Navigation Link
-// ===================================
 function setActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
@@ -136,9 +130,7 @@ function setActiveNavLink() {
     });
 }
 
-// ===================================
 // Smooth Scroll for Internal Links
-// ===================================
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -154,9 +146,7 @@ function initSmoothScroll() {
     });
 }
 
-// ===================================
 // Fade-in Animation on Scroll
-// ===================================
 function initScrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
@@ -177,9 +167,7 @@ function initScrollAnimations() {
     });
 }
 
-// ===================================
 // Initialize on DOM Load
-// ===================================
 document.addEventListener('DOMContentLoaded', function () {
     setActiveNavLink();
     initContactForm();
@@ -193,9 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// ===================================
 // WhatsApp Link Generator
-// ===================================
 function generateWhatsAppLink(phoneNumber, message = '') {
     // Remove all non-numeric characters from phone number
     const cleanNumber = phoneNumber.replace(/\D/g, '');
